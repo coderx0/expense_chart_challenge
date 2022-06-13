@@ -32,25 +32,25 @@ export default function Home() {
         <svg width="72" height="36" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" strokeWidth="2" cx="24" cy="24" r="23"/></g></svg>
       </div>
 
-      <div className='w-[90vw] sm:w-96 bg-white p-4 rounded-xl'>
-        <h1 className='font-bold text-xl'>Spending - Last 7 days</h1>
+      <div className='w-[90vw] sm:w-96 bg-[#fffaf5] p-4 rounded-xl'>
+        <h1 className='font-bold text-xl text-[#382314]'>Spending - Last 7 days</h1>
         <div className='flex items-end justify-around h-[200px]'>
           {data.map(d=>
           <div key={d.day} className="tooltip" data-tip={`$${d.amount}`}>
           <div style={{height: `${140*d.amount/max}px`}}
-           className={`${d.amount == max? 'bg-[#76b5bc]':'bg-red-400'} w-8 hover:bg-red-300 rounded-[5px]`}
+           className={`${d.amount == max? 'bg-[#76b5bc]':'bg-red-400'} w-9 hover:bg-red-300 rounded-[5px]`}
            ></div>
           <p className='text-center text-[12px]'>{d.day}</p>
           </div>)}
         </div>
         <div className='divider'></div>
-        <div>
-          <p className='text-[12px]'>Total this month</p>
+        <div className='text-[#382314]'>
+          <p className='text-[12px] text-[#93867b]'>Total this month</p>
           <div className='flex justify-between items-center'>
-            <h1 className='font-bold text-3xl'>${total}</h1>
+            <h1 className='font-bold text-3xl text-[#382314]'>${total}</h1>
             <div>
               <h1 className='font-bold text-right'>+2.4%</h1>
-              <p className='text-[12px]'>from last month</p>
+              <p className='text-[12px] text-[#93867b]'>from last month</p>
             </div>
           </div>
         </div>
